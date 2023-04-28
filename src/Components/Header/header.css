@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    position: relative;
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    border: 2px solid red;
+}
+ul {
+    list-style: none;
+}
+.nav {
+
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    background-color: #333;
+    z-index: 10;
+}
+.nav .container, .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site__logo {
+    display: block;
+    transform: translateX(-20px);
+    font-size: 2.2rem;
+}
+.nav__link, .site__logo {
+    padding: 10px;
+    margin: 0 10px;
+}
+.nav__list {
+    display: flex;
+    gap: 10px;
+    transform: translateX(20px);
+    transition: all  0.5s ease;
+}
+.active__nav-list {
+    display: none;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    padding: 50px 0;
+    background-color: #444;
+    /* flex-direction: column; */
+    transition: all  0.5s ease;
+
+}
+.active__nav-list a {
+    display: block;
+    padding-bottom: 20px;
+}
+.active__nav-list li:hover {
+    background-color: #555;
+}
+.burger__menu {
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    width: 50px;
+    height: 30px;
+    color: white;
+    z-index: 20;
+    transform: translateY(-50%);
+}
+.burger__line {
+    position: relative;
+    margin: 5px;
+    display: block;
+    width: 25px;
+    height: 5px;
+    background: white;
+}
+@media screen and (max-width:768px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav__list {
+        font-size: 1rem;
+    transform: translateX(-20px);
+
+    }
+    .site__logo {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width:576px) {
+    .site__logo{
+        padding-left: 20px;
+    }
+    .nav__list{
+        display: none;
+    }
+    .burger__menu {
+        display: block;
+        right: 12%;
+    }
+    .active__nav-list {
+        display: block;
+    }
+}
+@media screen and(min-width:576px) {
+    .nav__list{
+        display: flex ;
+    }
+    .nav__link, .nav__item{
+        display: block;
+        z-index: 500;
+    }
+}
+
