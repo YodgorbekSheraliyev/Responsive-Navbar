@@ -1,58 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
 .App {
   text-align: center;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 5px 0;
-  background-color: #565656;
-  z-index: 10;
-}
-.nav .container {
-  font-size: 1.5rem;
-  max-width: 70%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav ul {
-  display: flex;
-  gap: 15px;
-  margin: 0;
-}
-.card__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-.card  {
-  max-width: 350px;
-  text-align: center;
-  border: 2px solid grey;
-  position: relative;
-}
-.card img {
-  width: 100%;
-  object-fit: cover;
-}
-.card p{
-  margin-bottom:40px;
-}
-.info__btn {
-  position: absolute;
-  bottom: 5px;
-  right: 50%;
-  transform: translateX(50%);
-}
-.single__card {
-  margin: auto;
 }
