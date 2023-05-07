@@ -10,9 +10,7 @@ const Single = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(url);
-      setData(response.data[0]);
-    //   console.log(response.data[0]);
-      console.log(url);
+      setData(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -22,18 +20,20 @@ const Single = () => {
   }, [url]);
 
   return (
-    // console.log(data.flags.png)
-    <div className="card">
-      <img src={data.flags.png} alt={data.flags.alt} />
-      <h4>Country: {data.name.common}</h4>
-      <p>Capital: {data.capital}</p>
-      <span>Population: {data.population}</span>
-      <br />
-      <button>
-        <NavLink to="/">Back</NavLink>
-      </button>
-    </div>
-  
+    <>
+      {data.map((singleData, index) => (
+        <div key={index} className="card single__card">
+          <img src={singleData.flags.png} alt={singleData.flags.alt} />
+          <h4>Country: {singleData.name.common}</h4>
+          <p>Capital: {singleData.capital}</p>
+          <span>Population: {singleData.population}</span>
+          <br />
+          <button>
+            <NavLink to="/">Back</NavLink>
+          </button>
+        </div>
+      ))}
+    </>
   );
 };
 

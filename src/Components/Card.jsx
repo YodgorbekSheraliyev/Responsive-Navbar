@@ -9,7 +9,7 @@ const Card = (props) => {
         <h4>Country: {name}</h4>
         <p>Capital: {capital}</p>
         <p>Population: {population}</p>
-        <NavLink to={`/country/name/${name.toLowerCase()}`}>Read more</NavLink>
+        <button className='info__btn'><NavLink to={`/country/name/${name.toLowerCase()}` }>Read more</NavLink></button>
     </div>
   )
 }
