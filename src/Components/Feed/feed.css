@@ -1,0 +1,73 @@
+.feed__wrapper {
+  display: flex;
+  height: 100vh;
+}
+.feed__panel {
+  position: fixed;
+  left: 0;
+  padding: 30px 0;
+  width: 22%;
+  height: 100%;
+  text-align: center;
+
+  border-right: 2px solid #e6e6e6;
+}
+.feed__panel a {
+  display: block;
+  text-align: left;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 35px;
+}
+.panel__list {
+  margin: auto;
+  text-align: initial;
+  width: 50%;
+}
+.feed__panel li {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+.panel__name {
+  padding: 5px 15px;
+  font-weight: 600;
+  font-style: 18px;
+}
+.panel__name.active__panel-name {
+  font-weight: 700;
+}
+.panel__btn {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: #1d9bf0;
+  border: none;
+  border-radius: 27.5px;
+  letter-spacing: 2px;
+}
+
+/* feed-post */
+.feed__post {
+  width: 50%;
+  margin-left: 22%;
+  height: 500vh;
+  border-right: 2px solid #e6e6e6;
+}
+/* feed-settings */
+.feed__settings {
+  padding: 20px 0 20px 15px;
+}
+.feed__settings-input {
+  padding: 15px 10px 15px 60px;
+  background: #eff3f4;
+  border-radius: 31px;
+  border: none;
+}
+.search__icon {
+    position: relative;
+    bottom: 35px;
+    left: 15px;
+}
